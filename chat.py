@@ -72,7 +72,7 @@ def wrap_question_for_omni_lmm(question, image_token_len, tokenizer):
     question = expand_question_into_multimodal(
         question, image_token_len, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN, DEFAULT_IMAGE_PATCH_TOKEN)
 
-    conversation = question
+    conversation = question #prompt
     data_dict = omni_preprocess(sources=[conversation],
                                   tokenizer=tokenizer,
                                   generation=True)
